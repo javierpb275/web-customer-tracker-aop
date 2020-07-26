@@ -27,6 +27,9 @@ public class CRMLoggingAspect {
 	private void forDaoPackage()  {}
 	
 	
+	@Pointcut("forControllerPackage() || forServicePackage() || forControllerPackage()")// * : Match on any CLASS in the package. * : match on any METHOD in the class. .. : Match on any number of arguments
+	private void forAppFlow()  {}
+	
 	// add @Before advice
 	
 	// add @AfterReturning advice
